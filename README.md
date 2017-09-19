@@ -139,5 +139,44 @@ Use the spread operator (prefix the array name with \*) to pass its contents to 
 ```
 val list = asList(-1, 0, *a, 4)
 ```
+#### Top level function
+In Kotlin functions can be declared at top level in a file, meaning you do not need to create a class to hold a function
+
+#### Local Functions
+Kotlin supports local functions, i.e. a function inside another function. Local functions are closures means local function has access to the outer function variables & parameter (even the outer function has returned)
+```
+fun foo(radius: Int): Double {
+    val PI = 3.1416
+    // loacl fucntion has access to both PI & bar parameter
+    fun area(): Double{
+        return  PI * radius * radius;
+    }
+    
+    return area()
+}
+```
+
+#### Infix notation
+Functions can also be called using infix notations when:
+ - They are member functions or extension functions
+ - They have a single parameter
+ - They are marked with the infix keyword
+```
+// Define extension to Int
+infix fun Int.shl(x: Int): Int {
+    ...
+}
+
+// call extension function using infix notation
+1 shl 2
+// is the same as
+1.shl(2)
+```
+#### Generic Functions
+```
+fun <T> singletonList(item: T): List<T> {
+    // ...
+}
+```
 
 
