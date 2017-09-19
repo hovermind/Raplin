@@ -120,7 +120,7 @@ val result = foo(10) { x ->
 }
 
 ```
-### Variable number of arguments
+#### Variable number of arguments
 - only one parameter may be marked as `vararg`
 - inside a function a `vararg` parameter of type `T` is visible as an `array` of `T`
 ```
@@ -135,7 +135,7 @@ fun <T> asList(vararg ts: T): List<T> {
 ```
 Normally the last one is marked with `vararg` modifier. If `vararg` is not last parameter (i.e. lambda is last parameter), then use parameter name for `vararg` during function call.
 
-Use the spread operator (prefix the array name with \*) to to pass its contents to the function as variable arguments.
+Use the spread operator (prefix the array name with \*) to pass its contents to the function as variable arguments.
 ```
 val list = asList(-1, 0, *a, 4)
 ```
