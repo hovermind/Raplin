@@ -44,7 +44,7 @@ fun sum(a: Int, b: Int): Int {
     return a + b
 }
 ```
-### Single-Expression functions 
+#### Single-Expression functions 
 ```
 // Function with an expression body
 fun double(x: Int): Int = x * 2
@@ -53,7 +53,7 @@ Explicitly declaring the return type is optional when this can be inferred by th
 ```
 fun double(x: Int) = x * 2       // return type is inferred from righ side expression
 ```
-### `Unit` return type
+#### `Unit` return type
 `Unit` in Kotlin corresponds to the `void` type in other languages. `Unit` is a singleton object. It has only one value: `Unit`
 ```
 fun printSum(a: Int, b: Int): Unit {
@@ -68,7 +68,7 @@ fun printSum(a: Int, b: Int) {
 }
 ```
 
-### Named Arguments
+#### Named Arguments
 Named argument is optional in Kotlin. Parameter names can be used for clarity during function call.
 ```
 fun sum(a: Int, b: Int): Int {
@@ -87,7 +87,7 @@ fun sum(a: Int, b: Int, c: Int): Int {
 // function call
 val result = sum(5, 10, c = 20)   // a = 5, b = 10
 ```
-### Default Parameters
+#### Default Parameters
 Default values are defined using the `=` after `type` along with the value.
 ```
 fun sum(a: Int, b: Int = 10): Int {
@@ -107,7 +107,7 @@ class B : A() {
     override fun foo(i: Int) { ... }  // no default value allowed because default value of i is 10 (from super class A)
 }
 ```
-### Passing Lambda
+#### Passing Lambda
 Lambda can be passed to a function call outside the parentheses (as like Groovy)
 ```
 fun foo(bar: Int, mathFunction: (Int) -> Int) {
