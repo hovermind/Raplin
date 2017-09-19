@@ -44,11 +44,11 @@ fun sum(a: Int, b: Int): Int {
     return a + b
 }
 ```
-Function with an expression body
+## Function with an expression body
 ```
 fun sum(a: Int, b: Int) = a + b       // return type is inferred from righ side expression
 ```
-
+## ```Unit``` return type
 ```Unit``` in Kotlin corresponds to the ```void``` type in other languages. ```Unit``` is a singleton object. It has only one value: ```Unit```
 ```
 fun printSum(a: Int, b: Int): Unit {
@@ -75,24 +75,33 @@ val result = sum(a = 10, b = 20)
 ```
 When a function is called with both positional & named arguments, all the positional arguments should be placed before the first named one i.e. ```f(1, y = 2)``` is allowed, but ```f(x = 1, 2)``` is not.
 ```
-fun sum(a: Int, b: Int, c: Int = 20): Int {
-    return a + b
+fun sum(a: Int, b: Int, c: Int): Int {
+    return a + b + c
 }
 
 // function call
-val result = sum(5, 10)   // a = 5, b = 10, c = defualt (20)
+val result = sum(5, 10, c = 20)   // a = 5, b = 10
 ```
 ## Default Parameters
-Default values are defined using the ```=``` after type along with the value.
+Default values are defined using the ```=``` after `type` along with the value.
 ```
 fun sum(a: Int, b: Int = 10): Int {
     return a + b
 }
 
 // function call
-val result = sum(5)
+val result = sum(5)    // a = 5, b == defualt == 10
 ```
+Overriding methods always use the same default parameter values as the base method & therefore the default parameter values must be omitted from the signature in sub class
+```
+open class A {
+    open fun foo(i: Int = 10) { ... }
+}
 
+class B : A() {
+    override fun foo(i: Int) { ... }  // no default value allowed because default value of i is 10 (from super class A)
+}
+```
 
 
 
