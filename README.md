@@ -168,15 +168,24 @@ infix fun Int.shl(x: Int): Int {
 }
 
 // call extension function using infix notation
-1 shl 2
-// is the same as
-1.shl(2)
+val result = 1 shl 2    // same as 1.shl(2)
 ```
 #### Generic Functions
 ```
 fun <T> singletonList(item: T): List<T> {
-    // ...
+    // type T is determined during function call depending on arguments
 }
 ```
+#### Higher-Order Functions
+A higher-order function is a function that takes functions as parameters, or returns a function. The parameter of a higher order function is delegate / function type & the argument is lambda.
+```
+fun foo(bar: Int, mathFunction: (Int) -> Int) {
+    println("Math Function Result: ${mathFunction(bar)}")
+}
 
+// function call
+val result = foo(10) { x ->
+    x * x  // implicit return from lambda: last statement is return statement
+}
+```
 
