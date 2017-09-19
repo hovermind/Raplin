@@ -44,26 +44,31 @@ fun sum(a: Int, b: Int): Int {
     return a + b
 }
 ```
-## Function with an expression body
+### Single-Expression functions 
 ```
-fun sum(a: Int, b: Int) = a + b       // return type is inferred from righ side expression
+// Function with an expression body
+fun double(x: Int): Int = x * 2
 ```
-## ```Unit``` return type
-```Unit``` in Kotlin corresponds to the ```void``` type in other languages. ```Unit``` is a singleton object. It has only one value: ```Unit```
+Explicitly declaring the return type is optional when this can be inferred by the compiler
+```
+fun double(x: Int) = x * 2       // return type is inferred from righ side expression
+```
+### `Unit` return type
+`Unit` in Kotlin corresponds to the `void` type in other languages. `Unit` is a singleton object. It has only one value: `Unit`
 ```
 fun printSum(a: Int, b: Int): Unit {
     println("sum of $a and $b is ${a + b}")
 }
 ```
 
-```Unit``` return type can be omitted:
+`Unit` return type can be omitted:
 ```
 fun printSum(a: Int, b: Int) {
     println("sum of $a and $b is ${a + b}")
 }
 ```
 
-## Named Arguments
+### Named Arguments
 Named argument is optional in Kotlin. Parameter names can be used for clarity during function call.
 ```
 fun sum(a: Int, b: Int): Int {
@@ -73,7 +78,7 @@ fun sum(a: Int, b: Int): Int {
 // function call
 val result = sum(a = 10, b = 20)
 ```
-When a function is called with both positional & named arguments, all the positional arguments should be placed before the first named one i.e. ```f(1, y = 2)``` is allowed, but ```f(x = 1, 2)``` is not.
+When a function is called with both positional & named arguments, all the positional arguments should be placed before the first named one i.e. `f(1, y = 2)` is allowed, but `f(x = 1, 2)` is not.
 ```
 fun sum(a: Int, b: Int, c: Int): Int {
     return a + b + c
@@ -82,8 +87,8 @@ fun sum(a: Int, b: Int, c: Int): Int {
 // function call
 val result = sum(5, 10, c = 20)   // a = 5, b = 10
 ```
-## Default Parameters
-Default values are defined using the ```=``` after `type` along with the value.
+### Default Parameters
+Default values are defined using the `=` after `type` along with the value.
 ```
 fun sum(a: Int, b: Int = 10): Int {
     return a + b
@@ -102,8 +107,37 @@ class B : A() {
     override fun foo(i: Int) { ... }  // no default value allowed because default value of i is 10 (from super class A)
 }
 ```
+### Passing Lambda
+Lambda can be passed to a function call outside the parentheses (as like Groovy)
+```
+fun foo(bar: Int, mathFunction: (Int) -> Int) {
+    println("Math Function Result: ${mathFunction(bar)}")
+}
 
+// function call
+val result = foo(10) { x ->
+    x * x  // implicit return from lambda: last statement is return statement
+}
 
+```
+### Variable number of arguments
+- only one parameter may be marked as `vararg`
+- inside a function a `vararg` parameter of type `T` is visible as an `array` of `T`
+```
+fun <T> asList(vararg ts: T): List<T> {
+    val result = ArrayList<T>()
+    
+    // ts is type of Array<out T>
+    // precess here
+    
+    return result
+}
+```
+Normally the last one is marked with `vararg` modifier. If `vararg` is not last parameter (i.e. lambda is last parameter), then use parameter name for `vararg` during function call.
 
+Use the spread operator (prefix the array name with \*) to to pass its contents to the function as variable arguments.
+```
+val list = asList(-1, 0, *a, 4)
+```
 
 
