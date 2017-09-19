@@ -38,12 +38,13 @@
 - [Misc](#misc)
 
 # <a name="#function"></a>Function
+Use ```fun``` keyword to define function.
 ```
 fun sum(a: Int, b: Int): Int {
     return a + b
 }
 ```
-Function with an expression body and inferred return type:
+Function with an expression body
 ```
 fun sum(a: Int, b: Int) = a + b       // return type is inferred from righ side expression
 ```
@@ -61,6 +62,38 @@ fun printSum(a: Int, b: Int) {
     println("sum of $a and $b is ${a + b}")
 }
 ```
+
+## Named Arguments
+Named argument is optional in Kotlin. Parameter names can be used for clarity during function call.
+```
+fun sum(a: Int, b: Int): Int {
+    return a + b
+}
+
+// function call
+val result = sum(a = 10, b = 20)
+```
+When a function is called with both positional & named arguments, all the positional arguments should be placed before the first named one i.e. ```f(1, y = 2)``` is allowed, but ```f(x = 1, 2)``` is not.
+```
+fun sum(a: Int, b: Int, c: Int = 20): Int {
+    return a + b
+}
+
+// function call
+val result = sum(5, 10)   // a = 5, b = 10, c = defualt (20)
+```
+## Default Parameters
+Default values are defined using the ```=``` after type along with the value.
+```
+fun sum(a: Int, b: Int = 10): Int {
+    return a + b
+}
+
+// function call
+val result = sum(5)
+```
+
+
 
 
 
