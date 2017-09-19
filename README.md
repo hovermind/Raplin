@@ -49,7 +49,7 @@ fun sum(a: Int, b: Int): Int {
 // Function with an expression body
 fun double(x: Int): Int = x * 2
 ```
-Explicitly declaring the return type is optional when this can be inferred by the compiler
+The return type is optional when this can be inferred by the compiler
 ```
 fun double(x: Int) = x * 2       // return type is inferred from righ side expression
 ```
