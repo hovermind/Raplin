@@ -1,6 +1,18 @@
 **This is kinda Kotlin cheatsheet & intended for anyone who wants to learn Kotlin and is already good at (any) programming language i.e. C#, Java**
 
-# <a name="#toc">TOC
+## <a name="#toc">TOC
+* [data types and variables](#)
+* [literals and constant](#)
+* [printing and formatting](#)
+* [type related](#)
+* [optional type](#)
+* [type casting](#)
+* [operators](#)
+* [tuple](#)
+* [string](#)
+* [function](#)
+* [exception](#)
+    
 - [Data Types & Variables](#data-types)
 - [Constant](#constant)
 - [Type Inference](#type-inference)
