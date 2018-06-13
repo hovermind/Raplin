@@ -1,4 +1,4 @@
-## Nullable / optional type
+## Optional (nullable) type
 A regular variable (even string) can not hold `null` (in other languages i.e. C#, Java => string can hold `null`)
 
 ```
@@ -18,7 +18,7 @@ Now if you want to access the same `length` property, the compiler reports an er
 ```
 val len = name.length    // error: variable 'name' can be null
 ```
-## Using optional / nullable variables
+## Using optional variables
 
 **Checking for null in conditions**
 ```
