@@ -1,3 +1,4 @@
+## Nullable / optional type
 A regular variable (even string) can not hold `null` (in other languages i.e. C#, Java => string can hold `null`)
 
 ```
@@ -66,7 +67,7 @@ fun foo(node: Node): String? {
     // ...
 }
 ```
-**Collections of Nullable Type**
+**Collections of Nullable Type**    
 If you have a collection of elements of a nullable type and want to filter non-null elements, you can do so by using filterNotNull
 ```
 val nullableList: List<Int?> = listOf(1, 2, null, 4)
