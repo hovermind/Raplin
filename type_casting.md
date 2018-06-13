@@ -23,7 +23,7 @@ var longVal = intVal.toLong()
 var reIntVal = longVal.toInt()
 ```
 
-## Type Check with 'is'
+## Type check with `is`
 ```
 if (obj is String) {
     print("a String")
@@ -34,7 +34,7 @@ if (obj !is String) {      // same as !(obj is String)
 }
 ```
 
-## Smart Casts with "is"
+## Smart cast with `is`
 ```
 fun demo(x: Any) {
     if (x is String) {
@@ -54,15 +54,13 @@ if (x is String && x.length > 0) {
 }
 ```
 
-## "Unsafe" cast with "as"
+## Unsafe cast with `as`
 ```
 val x = y as String  // if y is null, there will be error because x is not nullable
 ```
 
-## "Safe" cast with "as"
+## Safe cast with `as`
 ```
 val x: String? = y as? String
 val x: String? = y as! String   // auto unwrap
 ```
-
-
