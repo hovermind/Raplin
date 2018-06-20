@@ -1,5 +1,5 @@
 ## Standard operators
-Same as **JAVA*
+Same as **JAVA**
 
 ## Kotlin specific operators
 * **Unary plus:** `+x`
