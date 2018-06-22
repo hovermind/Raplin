@@ -8,15 +8,6 @@ myString = "Howdy"
 val myStr = "Hey there!"
 ```
 
-## Accessing characters
-```
-val myString = "Hey there!"
-
-val y = myString[2]
-
-myString[2] = 'Y' // // Error! String is immutable
-```
-
 ## Iterating
 ```
 val myString = "Hovermind!"
@@ -24,6 +15,23 @@ val myString = "Hovermind!"
 for (ch in myString) {
     println(ch)
 }
+```
+
+## Raw string
+`'''`/`"""` used for Raw string & multi-line string
+```
+fun main(args: Array<String>) {
+
+    val myString = """
+    for (character in "Hey!")
+        println(character)
+    """
+    print(myString)
+}
+
+// output:
+    for (character in "Hey!")
+        println(character)
 ```
 
 ## Excape sequence
