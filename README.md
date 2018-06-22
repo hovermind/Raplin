@@ -4,7 +4,7 @@
 ## <a name="#toc">TOC
 * [data types and variables](https://github.com/hovermind/Raplin/blob/master/data_types_and_variables.md)
 * [literals and constant](https://github.com/hovermind/Raplin/blob/master/literals_and_constant.md)
-* [printing and formatting](https://github.com/hovermind/Raplin/blob/master/printing_and_formatting.md)
+* [printing and comment]https://github.com/hovermind/Raplin/blob/master/printing_and_comment.md)
 * [type related](https://github.com/hovermind/Raplin/blob/master/type_related.md)
 * [optional type](https://github.com/hovermind/Raplin/blob/master/optional_type.md)
 * [type casting](https://github.com/hovermind/Raplin/blob/master/type_casting.md)
