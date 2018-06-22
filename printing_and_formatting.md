@@ -1,6 +1,6 @@
 ## Print
-* `print()` : 
-* `println()` : 
+* `print()` : calls System.out.print() function of JAVA
+* `println()` : calls System.out.println() function of JAVA
 
 ## Interpolation
 ```
