@@ -31,6 +31,22 @@ fun main(args: Array<String>) {
 
 **Note:** raw string can also be interpolated
 
+## Concatenation
+* Interpolation : `val z = "$x $y"`
+* `+` / `plus()`: `val z = x + y` or `val z = x.plus(y)`
+* [StringBuilder](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/-string-builder/) :
+```
+val h = "Hello"
+val w = "World"
+
+val sb = StringBuilder()
+sb.append(h)
+sb.append(w)
+
+val hw = sb.toString()
+print(hw)              // HelloWorld
+```
+
 ## Excape sequence
 Here is a list of escape characters supported in Kotlin:
 * `\t` - Inserts tab
