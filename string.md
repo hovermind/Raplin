@@ -42,3 +42,9 @@ Here is a list of escape characters supported in Kotlin:
 * `\\` - Inserts backslash
 * `\$` - Inserts dollar character
 
+## String Properties and Functions
+* `length property` - returns the length of character sequence of an string.
+* `compareTo()` - compares this String (object) with the specified object. Returns 0 if the object is equal to the specfied object.
+* `get()` - returns character at the specified index.You can use index access operator instead of get function as index access operator internally calls get function.
+* `plus()` - returns a new string which is obtained by the concatenation of this string and the string passed to this function. You can use + operator instead of plus function as + operator calls plus function under the hood.
+* `subSequence()` - returns a new character sequence starting at the specified start and end index.
