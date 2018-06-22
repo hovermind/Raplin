@@ -47,10 +47,10 @@ val hw = sb.toString()
 print(hw)              // HelloWorld
 ```
 ## Split
-**See:**[split()](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/split.html)
+**See:** [split()](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/split.html)
 
 ## Join
-**See:**[joinToString()](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/join-to-string.html)
+**See:** [joinToString()](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/join-to-string.html)
 
 ## Excape sequence
 Here is a list of escape characters supported in Kotlin:
