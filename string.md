@@ -1,5 +1,5 @@
 * a sequence of characters
-* all strings are objects of `String` clas
+* all strings are objects of `String` class
 * immutable
 ```
 val myString: String
@@ -28,11 +28,11 @@ for (ch in myString) {
 
 ## Excape sequence
 Here is a list of escape characters supported in Kotlin:
-* \t - Inserts tab
-* \b - Inserts backspace
-* \n - Inserts newline
-* \r - Inserts carriage return
-* \' - Inserts single quote character
-* \" - Inserts double quote character
-* \\ - Inserts backslash
-* \$ - Inserts dollar character
+* `\t` - Inserts tab
+* `\b` - Inserts backspace
+* `\n` - Inserts newline
+* `\r` - Inserts carriage return
+* `\'` - Inserts single quote character
+* `\"` - Inserts double quote character
+* `\\` - Inserts backslash
+* `\$` - Inserts dollar character
