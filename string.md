@@ -22,14 +22,14 @@ fun main(args: Array<String>) {
 }
 // output: println() function
 ```
-Nate: `trimMargin()` can be used to remove spaces
+**Nate:** `trimMargin()` can be used to remove spaces
 
 ## Interpolation
 * Variable: `print("Total score for $name is $score")`
 * Class propery: `"${person.name}"`
 * Expression:  `"${1 * 2}"`
 
-Note: raw string can also be interpolated
+**Note:** raw string can also be interpolated
 
 ## Excape sequence
 Here is a list of escape characters supported in Kotlin:
