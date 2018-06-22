@@ -11,27 +11,21 @@ val myStr = "Hey there!"
 ## Iterating
 ```
 val myString = "Hovermind!"
-
 for (ch in myString) {
     println(ch)
 }
 ```
 
 ## Raw string
-`'''`/`"""` used for Raw string & multi-line string
+`"""` used for raw string & multi-line string
 ```
 fun main(args: Array<String>) {
-
     val myString = """
-    for (character in "Hey!")
-        println(character)
+        println() function
     """
     print(myString)
 }
-
-// output:
-    for (character in "Hey!")
-        println(character)
+// output: println() function
 ```
 
 ## Excape sequence
@@ -44,3 +38,14 @@ Here is a list of escape characters supported in Kotlin:
 * `\"` - Inserts double quote character
 * `\\` - Inserts backslash
 * `\$` - Inserts dollar character
+
+## Interpolation
+```
+val name = "hassan"
+val score = 82
+
+print("Total score for $name is $score")
+```
+* Class propery: `"${person.name}"`
+* Expression:  `"${1 * 2}"`
+
