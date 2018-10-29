@@ -11,13 +11,24 @@ foo = "Foo"
 
 val foo: String = "Foo"
 val foo = "Foo"  // type inference
+
+var emptyString = String() // empty String
 ```
 
-#### Iterating over chars
+#### Chars in String
 ```
+// iterating chars
 for (ch in myString) {
     println(ch)
 }
+
+// accessing chars
+val foo = "Foo"
+val f = foo[0]
+val f = foo.get(0)
+
+// immutable
+foo[0] = 'f'  // ERROR
 ```
 
 ## Raw string
@@ -80,3 +91,8 @@ Here is a list of escape characters supported in Kotlin:
 * `subSequence()` - returns a new character sequence starting at the specified start and end index.
 
 **See:** [Kotlin String Class](http://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/)
+
+## String Equality
+There are two types of equality checkers:
+* Referential Equality: Checks if the pointers for two objects are the same. `===` operator is used
+* Structural Equality : Checks if the contents of both the objects are equal. `==` is used
