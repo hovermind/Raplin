@@ -12,7 +12,7 @@
 * [tuple](https://github.com/hovermind/Raplin/blob/master/tuple.md)
 * [string](https://github.com/hovermind/Raplin/blob/master/string.md)
 * [function](https://github.com/hovermind/Raplin/blob/master/function.md)
-* [exception](#)
+* [exception](https://github.com/hovermind/Raplin/blob/master/exception.md)
     
 - [Data Types & Variables](#data-types)
 - [Constant](#constant)
