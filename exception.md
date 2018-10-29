@@ -24,7 +24,7 @@ val a: Int? = try { parseInt(input) } catch (e: NumberFormatException) { null }
 ```
 The returned value of a try-expression is either the last expression in the try block or the last expression in the catch block (or blocks). Contents of the finally block do not affect the result of the expression.
 
-## [`fail(): Nothing`(https://medium.com/@aramaki/how-kotlin-can-help-us-with-error-handling-4c2265c9b50)
+## [`fail(): Nothing`](https://medium.com/@aramaki/how-kotlin-can-help-us-with-error-handling-4c2265c9b50)
 `Nothing` is like Optional\<T\> in java
 ```
 fun fail(message: String): Nothing {
