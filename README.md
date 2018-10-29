@@ -9,7 +9,7 @@
 * [optional type](https://github.com/hovermind/Raplin/blob/master/optional_type.md)
 * [type casting](https://github.com/hovermind/Raplin/blob/master/type_casting.md)
 * [operators](https://github.com/hovermind/Raplin/blob/master/operators.md)
-* [tuple](#)
+* [tuple](https://github.com/hovermind/Raplin/blob/master/tuple.md)
 * [string](#)
 * [function](https://github.com/hovermind/Raplin/blob/master/function.md)
 * [exception](#)
