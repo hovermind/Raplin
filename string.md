@@ -1,16 +1,25 @@
+## String
 * a sequence of characters
 * all strings are objects of `String` class
 * immutable
+
+`CharSequence`(interface) is a readable sequence of char values. This interface provides uniform, read-only access to many different kinds of char sequences. Mutability is not enforced by this interface. String class implements the `CharSequence`, therefore, Strings are CharSequences.
+
 ```
-val myString: String
-myString = "Howdy"
+var foo: String
+foo = "Foo"
 
-val myString = "Hovermind!"
+val foo: String = "Foo"
+val foo = "Foo"  // type inference
+```
 
+#### Iterating over chars
+```
 for (ch in myString) {
     println(ch)
 }
 ```
+
 ## Raw string
 `"""` used for raw string & multi-line string
 ```
