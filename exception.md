@@ -25,7 +25,7 @@ val a: Int? = try { parseInt(input) } catch (e: NumberFormatException) { null }
 The returned value of a try-expression is either the last expression in the try block or the last expression in the catch block (or blocks). Contents of the finally block do not affect the result of the expression.
 
 ## `fail(): Nothing`
-`Nothing` is like Optional<T> in java
+`Nothing` is like `Optional\<T\>` in java
 ```
 fun fail(message: String): Nothing {
     throw IllegalArgumentException(message)
