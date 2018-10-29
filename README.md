@@ -11,7 +11,7 @@
 * [operators](https://github.com/hovermind/Raplin/blob/master/operators.md)
 * [tuple](#)
 * [string](#)
-* [function](#)
+* [function](https://github.com/hovermind/Raplin/blob/master/function.md)
 * [exception](#)
     
 - [Data Types & Variables](#data-types)
