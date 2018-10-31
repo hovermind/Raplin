@@ -50,6 +50,17 @@ fun foo(node: Node): String? {
     // ...
 }
 ```
+guard extension function
+```
+// Declare an extension function that calls a lambda called block if the value is null
+inline fun <T> T.guard(block: T.() -> Unit): T {
+    if (this == null) block(); return this
+}
+
+val thing: String? = null
+//if the thing is null it will return. Otherwise it will assign the value to notNullThing val
+val notNullThing = thing.guard { return }
+```
 
 ## Collections of nullable type
 If you have a collection of elements of a nullable type and want to filter non-null elements, you can do so by using filterNotNull
