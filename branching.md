@@ -60,7 +60,7 @@ val objectType = when {
 * **in range & not in range:** `in 1...10 ->`, `!in 1...10 ->`
 * **type check:** `is String ->`, `!is String ->`
 
-## Whe Expression with a case that Throws an Exception
+## Whe Expression with a case that throws an exception
 ```
 val result: Boolean = when (fileType) {
     UnixFileType.HYPHEN_MINUS -> true
@@ -68,7 +68,7 @@ val result: Boolean = when (fileType) {
 }
 ```
 
-## When as else-if (Used Without an Argument)
+## When as else-if
 when can also be used as a replacement for an `if-else if` chain. If no argument is supplied, the branch conditions are simply boolean expressions, and a branch is executed when its condition is true:
 ```
 when {
