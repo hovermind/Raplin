@@ -11,7 +11,7 @@ val len = name.length
 ```
 `type?` (i.e. `String?`) allows a variable to hold `null` value
 ```
-var name = "Hassan"
+var name: String? = "Hassan"
 name = null        // OK
 ```
 Now if you want to access the same `length` property, the compiler reports an error
@@ -26,7 +26,7 @@ var name = "Hassan"
 
 val len = if (name != null) name.length else -1
 ```
-**Elvis Operator with Safe Call**
+**Elvis Operator `?:` with safe call**
 ```
 var name = "Hassan"
 
