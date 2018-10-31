@@ -1,4 +1,4 @@
-## Optional (Nullable) Type
+## Optional type
 * type system distinguishes between references that can hold null (nullable) and those that can not
 * a regular variable can not hold null
 * to allow nulls, use nullable operator `?`
@@ -10,7 +10,7 @@ var b: String? = "abc"
 b = null // ok
 ```
 
-## Dealing with Nullable
+## Null stafety
 For non-nullable type, it's guaranteed not to cause an NPE. For nullable type, compiler shows error if there is possibilty of NPE.
 * **Checking for null in conditions:** `val l = if (b != null) b.length else -1`
 * **Safe call:** `x?.length` (returns length if `x` is not `null`, and `null` otherwise) 
