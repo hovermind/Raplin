@@ -26,9 +26,10 @@ val max = if (a > b) {
 
 ## When
 * when replaces the `switch` (and `else...if`) operator of C-like languages
+* no break statements are needed in the end of each case block
+* else branch is evaluated if none of the other branch conditions are satisfied (default)
 * when can be used either as an expression or as a statement
 * if when is used as an expression, the else branch is mandatory
-* else branch is evaluated if none of the other branch conditions are satisfied (default)
 ```
 when (x) {
     1 -> print("x == 1")
@@ -44,6 +45,17 @@ when (x) {
 * in range & not in range: `in 1...10 ->`, `!in 1...10 ->`
 * type check: `is String ->`, `!is String ->`
 
+### Whe Expression with a Case that Throws an Exception
+* In Kotlin, throw returns a value of type Nothing
+* Nothing is the type that inherits from all user-defined and built-in types (`Nullable<T>`)
+```
+val result: Boolean = when (fileType) {
+    UnixFileType.HYPHEN_MINUS -> true
+    else -> throw IllegalArgumentException("Wrong type of file")
+}
+```
+
+### When as `else...if`
 when can also be used as a replacement for an if-else if chain. If no argument is supplied, the branch conditions are simply boolean expressions, and a branch is executed when its condition is true:
 ```
 when {
