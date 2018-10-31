@@ -1,4 +1,5 @@
 ## Optional (Nullable) Type
+* type system distinguishes between references that can hold null (nullable references) and those that can not (non-null references) 
 * a regular variable can not hold null
 * to allow nulls, use nullable operator `?`
 ```
@@ -10,8 +11,7 @@ b = null // ok
 ```
 
 ## Dealing with Nullable
-Type system distinguishes between references that can hold null (nullable references) and those that can not (non-null references). For non-nullable type, it's guaranteed not to cause an NPE. 
-For nullable type, compiler shows error if there is possibilty of NPE.
+For non-nullable type, it's guaranteed not to cause an NPE. For nullable type, compiler shows error if there is possibilty of NPE.
 * **Checking for null in conditions:** `val l = if (b != null) b.length else -1`
 * **Safe call (same as C#):** `x?.length` (returns length if `x` is not `null`, and `null` otherwise)
 * **Elvis operator(`?:` => C# `??`):** `val personName = name ?: "Hassan"`
