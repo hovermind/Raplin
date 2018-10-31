@@ -3,7 +3,7 @@
 * [When](/branching.md#when)
 * [When as expression](/branching.md#when-as-expression)
 * [When cases](/branching.md#when-cases)
-* [Whe Expression with a case that throws an exception](/branching.md#whe-expression-with-a-case-that-throws-an-exception)
+* [When expression with a case that throws an exception](/branching.md#whe-expression-with-a-case-that-throws-an-exception)
 * [When as else-if](/branching.md#when-as-else-if)
 
 ## If
