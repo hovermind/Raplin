@@ -1,7 +1,7 @@
-* [If](#)
+* [If](/branching.md#if)
 * [When](/branching.md#when)
-* [When as expression](#)
-* [When cases](#)
+* [When as expression](/branching.md#when-as-expression)
+* [When cases](/branching.md#when-cases)
 * [Whe Expression with a case that Throws an Exception](#)
 * [When as else-if](#)
 
