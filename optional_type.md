@@ -13,9 +13,10 @@ b = null // ok
 ## Dealing with Nullable
 For non-nullable type, it's guaranteed not to cause an NPE. For nullable type, compiler shows error if there is possibilty of NPE.
 * **Checking for null in conditions:** `val l = if (b != null) b.length else -1`
-* **Safe call (same as C#):** `x?.length` (returns length if `x` is not `null`, and `null` otherwise)
-* **Elvis operator(`?:` => C# `??`):** `val personName = name ?: "Hassan"`
+* **Safe call:** `x?.length` (returns length if `x` is not `null`, and `null` otherwise) 
+* **Elvis operator:** `val personName = name ?: "Hassan"` (`?:` => C# `??`)
 * **Elvis operator with safe call:** `val personName = person?.name ?: "Hassan"`
+* **Safe casts:** `val x: Int? = a as? Int` (`null` if casting fails, instead of throwing `ClassCastException`)
 * **`let` keyword:**
 ```
 val listWithNulls: List<String?> = listOf("A", null, null, "B")
