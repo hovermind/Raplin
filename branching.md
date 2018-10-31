@@ -6,7 +6,7 @@
 * [Whe Expression with a case that throws an exception](/branching.md#whe-expression-with-a-case-that-throws-an-exception)
 * [When as else-if](/branching.md#when-as-else-if)
 
-## if
+## If
 * if is an expression (returns a value). Therefore there is no ternary operator
 * when used as an expression rather than a statement, an else branch is required
 * if branches can be blocks, and the last expression is the value of a block
