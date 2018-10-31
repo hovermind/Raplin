@@ -1,5 +1,5 @@
 ## Optional (Nullable) Type
-* type system distinguishes between references that can hold null (nullable references) and those that can not (non-null references) 
+* type system distinguishes between references that can hold null (nullable) and those that can not
 * a regular variable can not hold null
 * to allow nulls, use nullable operator `?`
 ```
@@ -25,7 +25,6 @@ for (item in listWithNulls) {
      } 
 }
 ```
-**Note: scope of `it`(non-null item) is `let {}` block**
 
 ## Forced unwrapping
 Not-null assertion operator `!!` (for NPE lovers) will return a non-null value of `x` or throw an NPE if `x` is `null`
