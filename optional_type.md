@@ -1,3 +1,10 @@
+# TOC
+* [Optional type](/optional_type.md#optional-type)
+* [Null stafety](/optional_type.md#null-stafety)
+* [Forced unwrapping](/optional_type.md#forced-unwrapping)
+* [Using elvis operator as like swift guard operator](/optional_type.md#using-elvis-operator-as-like-swift-guard-operator)
+* [Collections of nullable type](/optional_type.md#collections-of-nullable-type)
+
 ## Optional type
 * type system distinguishes between references that can hold null (nullable) and those that can not
 * a regular variable can not hold null
