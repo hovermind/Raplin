@@ -11,7 +11,7 @@
 * [operators](https://github.com/hovermind/Raplin/blob/master/operators.md)
 * [tuple](https://github.com/hovermind/Raplin/blob/master/tuple.md)
 * [branching](https://github.com/hovermind/Raplin/blob/master/branching.md)
-* [looping](#)
+* [looping](https://github.com/hovermind/Raplin/blob/master/looping.md)
 * [string](https://github.com/hovermind/Raplin/blob/master/string.md)
 * [function](https://github.com/hovermind/Raplin/blob/master/function.md)
 * [exception](https://github.com/hovermind/Raplin/blob/master/exception.md)
