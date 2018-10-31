@@ -1,3 +1,10 @@
+* [If](#)
+* [When](/branching.md#when)
+* [When as expression](#)
+* [When cases](#)
+* [Whe Expression with a case that Throws an Exception](#)
+* [When as else-if](#)
+
 ## IF
 * if is an expression (returns a value). Therefore there is no ternary operator
 * when used as an expression rather than a statement, an else branch is required
@@ -36,7 +43,8 @@ when (x) {
     }
 }
 ```
-**When as expression**
+
+## When as expression
 ```
 val objectType = when {
     fileType === UnixFileType.L -> "l"
@@ -45,13 +53,14 @@ val objectType = when {
     else -> "unknown file type"
 }
 ```
-## `when(x)` cases:
+
+## When cases
 * **multiple cases:** `1, 2, 3 ->`
 * **arbitrary expressions:** `parseInt(strIntVal) ->`
 * **in range & not in range:** `in 1...10 ->`, `!in 1...10 ->`
 * **type check:** `is String ->`, `!is String ->`
 
-## Whe Expression with a Case that Throws an Exception
+## Whe Expression with a case that Throws an Exception
 ```
 val result: Boolean = when (fileType) {
     UnixFileType.HYPHEN_MINUS -> true
@@ -59,7 +68,7 @@ val result: Boolean = when (fileType) {
 }
 ```
 
-## When as `else...if` (Used Without an Argument)
+## When as else-if (Used Without an Argument)
 when can also be used as a replacement for an `if-else if` chain. If no argument is supplied, the branch conditions are simply boolean expressions, and a branch is executed when its condition is true:
 ```
 when {
