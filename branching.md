@@ -1,7 +1,7 @@
 ## IF
-* if is an expression (it returns a value). Therefore there is no ternary operator, because ordinary if works fine in this role.
-* if branches can be blocks, and the last expression is the value of a block
+* if is an expression (returns a value). Therefore there is no ternary operator
 * when used as an expression rather than a statement, an else branch is required
+* if branches can be blocks, and the last expression is the value of a block
 ```
 if () {
 } else if {
@@ -36,13 +36,22 @@ when (x) {
     }
 }
 ```
-### `when(x)` cases:
-* multiple cases: `1, 2, 3 ->`
-* arbitrary expressions: `parseInt(strIntVal) ->`
-* in range & not in range: `in 1...10 ->`, `!in 1...10 ->`
-* type check: `is String ->`, `!is String ->`
+**When as expression**
+```
+val objectType = when {
+    fileType === UnixFileType.L -> "l"
+    fileType === UnixFileType.HYPHEN_MINUS -> "-"
+    fileType === UnixFileType.D -> "d"
+    else -> "unknown file type"
+}
+```
+## `when(x)` cases:
+* **multiple cases:** `1, 2, 3 ->`
+* **arbitrary expressions:** `parseInt(strIntVal) ->`
+* **in range & not in range:** `in 1...10 ->`, `!in 1...10 ->`
+* **type check:** `is String ->`, `!is String ->`
 
-### Whe Expression with a Case that Throws an Exception
+## Whe Expression with a Case that Throws an Exception
 ```
 val result: Boolean = when (fileType) {
     UnixFileType.HYPHEN_MINUS -> true
@@ -50,19 +59,12 @@ val result: Boolean = when (fileType) {
 }
 ```
 
-### When as `else...if` (Used Without an Argument)
+## When as `else...if` (Used Without an Argument)
 when can also be used as a replacement for an `if-else if` chain. If no argument is supplied, the branch conditions are simply boolean expressions, and a branch is executed when its condition is true:
 ```
 when {
     x.isOdd() -> print("x is odd")
     x.isEven() -> print("x is even")
     else -> print("x is funny")
-}
-
-val objectType = when {
-    fileType === UnixFileType.L -> "l"
-    fileType === UnixFileType.HYPHEN_MINUS -> "-"
-    fileType === UnixFileType.D -> "d"
-    else -> "unknown file type"
 }
 ```
