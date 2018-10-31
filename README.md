@@ -6,7 +6,7 @@
 * [literals and constant](https://github.com/hovermind/Raplin/blob/master/literals_and_constant.md)
 * [printing and comment](https://github.com/hovermind/Raplin/blob/master/printing_and_comment.md)
 * [type related](https://github.com/hovermind/Raplin/blob/master/type_related.md)
-* [optional type](https://github.com/hovermind/Raplin/blob/master/optional_type.md)
+* [optional type & null safety](https://github.com/hovermind/Raplin/blob/master/optional_type.md)
 * [type casting](https://github.com/hovermind/Raplin/blob/master/type_casting.md)
 * [operators](https://github.com/hovermind/Raplin/blob/master/operators.md)
 * [tuple](https://github.com/hovermind/Raplin/blob/master/tuple.md)
