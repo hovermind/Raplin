@@ -1,3 +1,4 @@
+# TOC
 * [If](/branching.md#if)
 * [When](/branching.md#when)
 * [When as expression](/branching.md#when-as-expression)
