@@ -27,21 +27,14 @@ for (item in listWithNulls) {
 ```
 **Note: scope of `it`(non-null item) is `let {}` block**
 
-## Force Unwrap `!!` (for NPE lovers)
-`x!!` will return a non-null value of `x` or throw an NPE if `x` is `null`
+## Forced unwrapping
+ `!!` (for NPE lovers) will return a non-null value of `x` or throw an NPE if `x` is `null`
 ```
 val len = name!!.length  // NPE if name is null
 
 if(name != null){
     val len = name!!.length  // compiler understands name.length is safe here
 }
-```
-
-## Auto Unwrap
-Use `!` (instead of `?`)
-```
-var name: String! = getPersonName()
-val len = name.length
 ```
 
 ## Using elvis operator as like swift guard operator
@@ -51,6 +44,8 @@ fun foo(node: Node): String? {
     val parent = node.getParent() ?: return null  // early exit
     
     val name = node.getName() ?: throw IllegalArgumentException("name expected")
+    
+    val x = node?.let { it.x } ?: return
     
     // ...
 }
