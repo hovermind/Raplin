@@ -28,7 +28,7 @@ for (item in listWithNulls) {
 **Note: scope of `it`(non-null item) is `let {}` block**
 
 ## Forced unwrapping
- `!!` (for NPE lovers) will return a non-null value of `x` or throw an NPE if `x` is `null`
+Not-null assertion operator `!!` (for NPE lovers) will return a non-null value of `x` or throw an NPE if `x` is `null`
 ```
 val len = name!!.length  // NPE if name is null
 
