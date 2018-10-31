@@ -1,13 +1,11 @@
 ## IF
-* in Kotlin, if is an expression (it returns a value). Therefore there is no ternary operator (`condition ? ... : ...`), because ordinary if works fine in this role.
+* if is an expression (it returns a value). Therefore there is no ternary operator, because ordinary if works fine in this role.
 * if branches can be blocks, and the last expression is the value of a block
 * when used as an expression rather than a statement, an else branch is required
 ```
-var max: Int = 0
-if (a > b) {
-    max = a
+if () {
+} else if {
 } else {
-    max = b
 }
  
 // As expression 
@@ -22,10 +20,9 @@ val max = if (a > b) {
     b
 }
 ```
-**Note: Kotlin does not have `else...if`, use `when` instead**
 
 ## When
-* when replaces the `switch` (and `else...if`) operator of C-like languages
+* when replaces the `switch` operator of C-like languages
 * no break statements are needed in the end of each case block
 * else branch is evaluated if none of the other branch conditions are satisfied (default)
 * when can be used either as an expression or as a statement
@@ -46,8 +43,6 @@ when (x) {
 * type check: `is String ->`, `!is String ->`
 
 ### Whe Expression with a Case that Throws an Exception
-* In Kotlin, throw returns a value of type Nothing
-* Nothing is the type that inherits from all user-defined and built-in types (`Nullable<T>`)
 ```
 val result: Boolean = when (fileType) {
     UnixFileType.HYPHEN_MINUS -> true
