@@ -39,7 +39,7 @@ when (x) {
     }
 }
 ```
-`when(x)` cases:
+### `when(x)` cases:
 * multiple cases: `1, 2, 3 ->`
 * arbitrary expressions: `parseInt(strIntVal) ->`
 * in range & not in range: `in 1...10 ->`, `!in 1...10 ->`
