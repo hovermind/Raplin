@@ -55,12 +55,19 @@ val result: Boolean = when (fileType) {
 }
 ```
 
-### When as `else...if`
-when can also be used as a replacement for an if-else if chain. If no argument is supplied, the branch conditions are simply boolean expressions, and a branch is executed when its condition is true:
+### When as `else...if` (Used Without an Argument)
+when can also be used as a replacement for an `if-else if` chain. If no argument is supplied, the branch conditions are simply boolean expressions, and a branch is executed when its condition is true:
 ```
 when {
     x.isOdd() -> print("x is odd")
     x.isEven() -> print("x is even")
     else -> print("x is funny")
+}
+
+val objectType = when {
+    fileType === UnixFileType.L -> "l"
+    fileType === UnixFileType.HYPHEN_MINUS -> "-"
+    fileType === UnixFileType.D -> "d"
+    else -> "unknown file type"
 }
 ```
