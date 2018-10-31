@@ -2,8 +2,8 @@
 * [When](/branching.md#when)
 * [When as expression](/branching.md#when-as-expression)
 * [When cases](/branching.md#when-cases)
-* [Whe Expression with a case that Throws an Exception](#)
-* [When as else-if](#)
+* [Whe Expression with a case that throws an exception](/branching.md#whe-expression-with-a-case-that-throws-an-exception)
+* [When as else-if](/branching.md#when-as-else-if)
 
 ## IF
 * if is an expression (returns a value). Therefore there is no ternary operator
