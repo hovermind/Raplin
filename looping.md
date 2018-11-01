@@ -34,3 +34,15 @@ for ((index, value) in array.withIndex()) {
     println("the element at $index is $value")
 }
 ```
+
+## While loop
+```
+while (testExpression) {
+    // ...
+}
+
+
+do {
+    // ...
+} while (testExpression);
+```
