@@ -1,37 +1,35 @@
 ## Function
-Use ```fun``` keyword to define function.
-```
+Use `fun` keyword to define function.
+```kotlin
 fun sum(a: Int, b: Int): Int {
     return a + b
 }
 ```
-#### Single-Expression functions 
-```
-// Function with an expression body
+## Single expression function
+Function with an expression body
+```kotlin
 fun double(x: Int): Int = x * 2
+
+// return type is optional when return type can be inferred from righ side expression
+fun double(x: Int) = x * 2
 ```
-The return type is optional when this can be inferred by the compiler
-```
-fun double(x: Int) = x * 2       // return type is inferred from righ side expression
-```
-#### `Unit` return type
+
+## Unit return type
 `Unit` in Kotlin corresponds to the `void` type in other languages. `Unit` is a singleton object. It has only one value: `Unit`
-```
+```kotlin
 fun printSum(a: Int, b: Int): Unit {
     println("sum of $a and $b is ${a + b}")
 }
-```
 
-`Unit` return type can be omitted:
-```
+// Unit return type can be omitted:
 fun printSum(a: Int, b: Int) {
     println("sum of $a and $b is ${a + b}")
 }
 ```
 
-#### Named Arguments
+## Named arguments
 Named argument is optional in Kotlin. Parameter names can be used for clarity during function call.
-```
+```kotlin
 fun sum(a: Int, b: Int): Int {
     return a + b
 }
@@ -39,17 +37,10 @@ fun sum(a: Int, b: Int): Int {
 // function call
 val result = sum(a = 10, b = 20)
 ```
-When a function is called with both positional & named arguments, all the positional arguments should be placed before the first named one i.e. `f(1, y = 2)` is allowed, but `f(x = 1, 2)` is not.
-```
-fun sum(a: Int, b: Int, c: Int): Int {
-    return a + b + c
-}
+**Note:** When a function is called with both positional & named arguments, all the positional arguments should be placed before the first named one i.e. `f(1, y = 2)` is allowed, but `f(x = 1, 2)` is not.
 
-// function call
-val result = sum(5, 10, c = 20)   // a = 5, b = 10
-```
-#### Default Parameters
-Default values are defined using the `=` after `type` along with the value.
+## Default parameter
+Default values are defined using the `=` after `type` along with the value
 ```
 fun sum(a: Int, b: Int = 10): Int {
     return a + b
@@ -68,20 +59,8 @@ class B : A() {
     override fun foo(i: Int) { ... }  // no default value allowed because default value of i is 10 (from super class A)
 }
 ```
-#### Passing Lambda
-Lambda can be passed to a function call outside the parentheses (as like Groovy)
-```
-fun foo(bar: Int, mathFunction: (Int) -> Int) {
-    println("Math Function Result: ${mathFunction(bar)}")
-}
 
-// function call
-val result = foo(10) { x ->
-    x * x  // implicit return from lambda: last statement is return statement
-}
-
-```
-#### Variable number of arguments
+## Variable number of arguments
 - only one parameter may be marked as `vararg`
 - inside a function a `vararg` parameter of type `T` is visible as an `array` of `T`
 ```
@@ -94,21 +73,27 @@ fun <T> asList(vararg ts: T): List<T> {
     return result
 }
 ```
-Normally the last one is marked with `vararg` modifier. If `vararg` is not last parameter (i.e. lambda is last parameter), then use parameter name for `vararg` during function call.
+**Note:** Normally the last one is marked with `vararg` modifier. If `vararg` is not last parameter (i.e. lambda is last parameter), then use parameter name for `vararg` during function call
 
 Use the spread operator (prefix the array name with \*) to pass its contents to the function as variable arguments.
 ```
 val list = asList(-1, 0, *a, 4)
 ```
-#### Top level function
-In Kotlin functions can be declared at top level in a file, meaning you do not need to create a class to hold a function
 
-#### Local Functions
+## Generic function
+```
+fun <T> singletonList(item: T): List<T> {
+    // type T is determined during function call depending on arguments
+}
+```
+
+## Local function
 Kotlin supports local functions, i.e. a function inside another function. Local functions are closures means local function has access to the outer function variables & parameter (even the outer function has returned)
 ```
 fun foo(radius: Int): Double {
     val PI = 3.1416
-    // loacl fucntion has access to both PI & bar parameter
+    
+    // loacl fucntion has access to both PI & radius parameter
     fun area(): Double{
         return  PI * radius * radius;
     }
@@ -117,7 +102,10 @@ fun foo(radius: Int): Double {
 }
 ```
 
-#### Infix notation
+## Top level function
+In Kotlin functions can be declared at top level in a file, meaning you do not need to create a class to hold a function
+
+## Infix notation
 Functions can also be called using infix notations when:
  - They are member functions or extension functions
  - They have a single parameter
@@ -131,13 +119,8 @@ infix fun Int.shl(x: Int): Int {
 // call extension function using infix notation
 val result = 1 shl 2    // same as 1.shl(2)
 ```
-#### Generic Functions
-```
-fun <T> singletonList(item: T): List<T> {
-    // type T is determined during function call depending on arguments
-}
-```
-#### Higher-Order Functions
+
+## Higher order function
 A higher-order function is a function that takes functions as parameters, or returns a function. The parameter of a higher order function is delegate / function type & the argument is lambda.
 ```
 fun foo(bar: Int, mathFunction: (Int) -> Int) {
@@ -146,6 +129,19 @@ fun foo(bar: Int, mathFunction: (Int) -> Int) {
 
 // function call
 val result = foo(10) { x ->
+    x * x  // implicit return from lambda: last statement is return statement
+}
+```
+
+## Passing lambda
+Lambda can be passed to a function call outside the parentheses (as like Groovy)
+```
+fun foo(bar: Int, mathFunction: (Int) -> Int) {
+    println("Math Function Result: ${mathFunction(bar)}")
+}
+
+// function call
+val result = foo(bar: 10) { x ->
     x * x  // implicit return from lambda: last statement is return statement
 }
 ```
