@@ -1,3 +1,16 @@
+# TOC
+* [Single expression function](/function.md#single-expression-function)
+* [Unit return type](https://github.com/hovermind/Raplin/blob/master/function.md#unit-return-type)
+* [Named arguments](/function.md#named-arguments)
+* [Default parameter](/function.md#default-parameter)
+* [Variable number of arguments](/function.md#variable-number-of-arguments)
+* [Generic function](/function.md#generic-function)
+* [Local function](/function.md#local-function)
+* [Infix notation](/function.md#infix-notation)
+* [Higher order function](/function.md#higher-order-function)
+* [Passing lambda](/function.md#passing-lambda)
+
+
 ## Function
 Use `fun` keyword to define function.
 ```kotlin
@@ -41,7 +54,7 @@ val result = sum(a = 10, b = 20)
 
 ## Default parameter
 Default values are defined using the `=` after `type` along with the value
-```
+```kotlin
 fun sum(a: Int, b: Int = 10): Int {
     return a + b
 }
@@ -50,7 +63,7 @@ fun sum(a: Int, b: Int = 10): Int {
 val result = sum(5)    // a = 5, b == defualt == 10
 ```
 Overriding methods always use the same default parameter values as the base method & therefore the default parameter values must be omitted from the signature in sub class
-```
+```kotlin
 open class A {
     open fun foo(i: Int = 10) { ... }
 }
@@ -63,7 +76,7 @@ class B : A() {
 ## Variable number of arguments
 - only one parameter may be marked as `vararg`
 - inside a function a `vararg` parameter of type `T` is visible as an `array` of `T`
-```
+```kotlin
 fun <T> asList(vararg ts: T): List<T> {
     val result = ArrayList<T>()
     
@@ -76,12 +89,12 @@ fun <T> asList(vararg ts: T): List<T> {
 **Note:** Normally the last one is marked with `vararg` modifier. If `vararg` is not last parameter (i.e. lambda is last parameter), then use parameter name for `vararg` during function call
 
 Use the spread operator (prefix the array name with \*) to pass its contents to the function as variable arguments.
-```
+```kotlin
 val list = asList(-1, 0, *a, 4)
 ```
 
 ## Generic function
-```
+```kotlin
 fun <T> singletonList(item: T): List<T> {
     // type T is determined during function call depending on arguments
 }
@@ -89,7 +102,7 @@ fun <T> singletonList(item: T): List<T> {
 
 ## Local function
 Kotlin supports local functions, i.e. a function inside another function. Local functions are closures means local function has access to the outer function variables & parameter (even the outer function has returned)
-```
+```kotlin
 fun foo(radius: Int): Double {
     val PI = 3.1416
     
@@ -110,7 +123,7 @@ Functions can also be called using infix notations when:
  - They are member functions or extension functions
  - They have a single parameter
  - They are marked with the infix keyword
-```
+```kotlin
 // Define extension to Int
 infix fun Int.shl(x: Int): Int {
     ...
@@ -122,7 +135,7 @@ val result = 1 shl 2    // same as 1.shl(2)
 
 ## Higher order function
 A higher-order function is a function that takes functions as parameters, or returns a function. The parameter of a higher order function is delegate / function type & the argument is lambda.
-```
+```kotlin
 fun foo(bar: Int, mathFunction: (Int) -> Int) {
     println("Math Function Result: ${mathFunction(bar)}")
 }
@@ -135,7 +148,7 @@ val result = foo(10) { x ->
 
 ## Passing lambda
 Lambda can be passed to a function call outside the parentheses (as like Groovy)
-```
+```kotlin
 fun foo(bar: Int, mathFunction: (Int) -> Int) {
     println("Math Function Result: ${mathFunction(bar)}")
 }
