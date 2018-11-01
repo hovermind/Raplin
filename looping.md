@@ -1,10 +1,18 @@
+# TOC
+* [iterates through anything that provides an iterator](/looping.md#iterates-through-anything-that-provides-an-iterator)
+* [iterating over a range](/looping.md#iterating-over-a-range)
+* [iterating over a range with step](/looping.md#iterating-over-a-range-with-step)
+* [iteraring over array](/looping.md#iteraring-over-array)
+* [while and do while](/looping.md#while-loop)
+
 ## For loop
 ```
 for (item: Int in fooList) {
     // ...
 }
 ```
-#### iterates through anything that provides an iterator (like `foreach` in C#)
+#### iterates through anything that provides an iterator
+Same as`foreach` in C#
 ```
 for (item in collection) {
     print(item)
