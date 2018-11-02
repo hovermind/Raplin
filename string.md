@@ -1,3 +1,7 @@
+# TOC
+* [String](/string.md#string)
+* [Chars in String]()
+
 ## String
 * a sequence of characters
 * all strings are objects of `String` class
@@ -15,7 +19,7 @@ val foo = "Foo"  // type inference
 var emptyString = String() // empty String
 ```
 
-#### Chars in String
+## Chars in String
 ```kotlin
 // iterating chars
 for (ch in myString) {
