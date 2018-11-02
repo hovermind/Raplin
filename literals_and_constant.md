@@ -13,16 +13,16 @@ val PI = 3.1416;
 ##### Type suffix
 | Type | suffix |example|
 |------|--------|-------|
-|  `Int` | no suffix (default) | val x = 10
-| `Long` | L | val x = 10L |
-| `Float`| F | val x = 10.0F |
-| `Double` | no suffix (default) | val x = 10.0 |
+|  `Int` | no suffix (default) | `val x = 10` |
+| `Long` | L | `val x = 10L` |
+| `Float`| F | `val x = 10.0F` |
+| `Double` | no suffix (default) | `val x = 10.0` |
 
 ##### Type prefix
 | number system | prefix | example |
 |---------------|--------|---------|
-| Hexadecimal |  0x... | val hexBytes = 0xFFECDE5E |
-| Binary | 0b... | val bytes = 0b11010010 |
+| Hexadecimal |  `0x...` | `val hexBytes = 0xFFECDE5E` |
+| Binary | `0b...` | `val bytes = 0b11010010` |
 
 ## Underscores in numeric literals
 ```kotlin
