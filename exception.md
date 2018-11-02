@@ -31,7 +31,7 @@ val a: Int? = try { parseInt(input) } catch (e: NumberFormatException) { null }
 
 ## [`fail(): Nothing`](https://medium.com/@aramaki/how-kotlin-can-help-us-with-error-handling-4c2265c9b50)
 * In Kotlin, throw returns a value of type Nothing
-* Nothing is the type that inherits from all user-defined and built-in types (`Nothing` is like Optional\<T\> in java)
+* `Nothing` is the type that inherits from all user-defined and built-in types (`Nothing` is like Optional\<T\> in java)
 ```kotlin
 fun fail(message: String): Nothing {
     throw IllegalArgumentException(message)
