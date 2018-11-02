@@ -1,3 +1,10 @@
+# TOC
+* [Casting](/type_casting.md#casting)
+* [Type check with is](/type_casting.md#type-check-with-is)
+* [Smart cast with is](/type_casting.md#smart-cast-with-is)
+* [Unsafe cast with as](/type_casting.md#unsafe-cast-with-as)
+* [Safe cast with as](/type_casting.md#safe-cast-with-as)
+
 ## Casting
 * kotlin does not support implicit conversion
 * types in kotlin are objects thus have associated helper methods
