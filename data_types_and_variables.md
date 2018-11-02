@@ -1,3 +1,7 @@
+# TOC
+* [Datatypes](/data_types_and_variables.md#datatypes)
+* [Variable](/data_types_and_variables.md#variable)
+
 ## Datatypes
 Starts with Capital letter & every type has helper methods (similar to C#)
 * **Int** (default, 32-bit signed, -231 to 231-1)
