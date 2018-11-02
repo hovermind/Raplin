@@ -1,3 +1,8 @@
+# TOC
+* [Exception](/exception.md#exception)
+* [Try expression](/exception.md#try-expression)
+* [fail(): Nothing](/exception.md#fail-nothing)
+
 ## Exception
 `try-catch` works pretty much the same way as it does in Java
 ```
