@@ -1,14 +1,19 @@
 # TOC
 * [String](/string.md#string)
-* [Chars in String]()
+* [Chars in String](/string.md#chars-in-string)
+* [Raw string](/string.md#raw-string)
+* [Interpolation](/string.md#interpolation)
+* [Concatenation](/string.md#concatenation)
+* [Split](/string.md#split)
+* [Join](/string.md#join)
+* [Excape sequence](/string.md#excape-sequence)
+* [String Properties and Functions](/string.md#string-properties-and-functions)
+* [String Equality](/string.md#string-equality)
 
 ## String
 * a sequence of characters
 * all strings are objects of `String` class
 * immutable
-
-`CharSequence`(interface) is a readable sequence of char values. This interface provides uniform, read-only access to many different kinds of char sequences. Mutability is not enforced by this interface. String class implements the `CharSequence`, therefore, Strings are CharSequences.
-
 ```kotlin
 var foo: String
 foo = "Foo"
@@ -18,6 +23,7 @@ val foo = "Foo"  // type inference
 
 var emptyString = String() // empty String
 ```
+`CharSequence`(interface) is a readable sequence of char values. This interface provides uniform, read-only access to many different kinds of char sequences. Mutability is not enforced by this interface. String class implements the `CharSequence`, therefore, Strings are CharSequences.
 
 ## Chars in String
 ```kotlin
