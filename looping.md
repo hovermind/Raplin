@@ -6,26 +6,26 @@
 * [while and do while](/looping.md#while-loop)
 
 ## For loop
-```
+```kotlin
 for (item: Int in fooList) {
     // ...
 }
 ```
 #### iterates through anything that provides an iterator
 Same as`foreach` in C#
-```
+```kotlin
 for (item in collection) {
     print(item)
 }
 ```
 #### iterating over a range
-```
+```kotlin
 for (i in 1..3) {
     println(i)
 }
 ```
 #### iterating over a range with step
-```
+```kotlin
 for (i in 6 downTo 0 step 2) {
     println(i)
 }
@@ -33,7 +33,7 @@ for (i in 6 downTo 0 step 2) {
 See: [Range Expression](https://kotlinlang.org/docs/reference/ranges.html)
 
 #### iteraring over array
-```
+```kotlin
 for (i in array.indices) {
     println(array[i])
 }
@@ -44,7 +44,7 @@ for ((index, value) in array.withIndex()) {
 ```
 
 ## While loop
-```
+```kotlin
 while (testExpression) {
     // ...
 }
