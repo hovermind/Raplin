@@ -1,13 +1,9 @@
 ## Variable
-`var` keyword to declare variable
-```
+* `var` keyword to declare variable
+* `val` keyword to declare read-only variable (also for constant)
+```kotlin
 var x: Int = 10;
-
-var y: Double;
-y= 13.5
-```
-`val` keyword to declare read-only variable (also for constant)
-```
+var x = 10 // type inference
 val PI = 3.1416;
 ```
 
