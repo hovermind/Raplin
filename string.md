@@ -5,7 +5,7 @@
 
 `CharSequence`(interface) is a readable sequence of char values. This interface provides uniform, read-only access to many different kinds of char sequences. Mutability is not enforced by this interface. String class implements the `CharSequence`, therefore, Strings are CharSequences.
 
-```
+```kotlin
 var foo: String
 foo = "Foo"
 
@@ -16,7 +16,7 @@ var emptyString = String() // empty String
 ```
 
 #### Chars in String
-```
+```kotlin
 // iterating chars
 for (ch in myString) {
     println(ch)
@@ -33,7 +33,7 @@ foo[0] = 'f'  // ERROR
 
 ## Raw string
 `"""` used for raw string & multi-line string
-```
+```kotlin
 fun main(args: Array<String>) {
     val myString = """
         println() function
@@ -55,7 +55,7 @@ fun main(args: Array<String>) {
 * Interpolation : `val z = "$x $y"`
 * `+` / `plus()`: `val z = x + y` or `val z = x.plus(y)`
 * [StringBuilder](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/-string-builder/) :
-```
+```kotlin
 val h = "Hello"
 val w = "World"
 
