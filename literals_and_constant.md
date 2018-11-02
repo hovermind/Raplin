@@ -1,5 +1,5 @@
 ## Constants
-* No keyword for constant
+* no keyword for constant
 * `val` is used for both constant and read-only variables
 ```kotlin
 val PI = 3.1416;
