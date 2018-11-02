@@ -10,7 +10,7 @@
 * if is an expression (returns a value). Therefore there is no ternary operator
 * when used as an expression rather than a statement, an else branch is required
 * if branches can be blocks, and the last expression is the value of a block
-```
+```kotlin
 if () {
 } else if {
 } else {
@@ -35,7 +35,7 @@ val max = if (a > b) {
 * else branch is evaluated if none of the other branch conditions are satisfied (default)
 * when can be used either as an expression or as a statement
 * if when is used as an expression, the else branch is mandatory
-```
+```kotlin
 when (x) {
     1 -> print("x == 1")
     2 -> print("x == 2")
@@ -46,7 +46,7 @@ when (x) {
 ```
 
 ## When as expression
-```
+```kotlin
 val objectType = when {
     fileType === UnixFileType.L -> "l"
     fileType === UnixFileType.HYPHEN_MINUS -> "-"
@@ -62,7 +62,7 @@ val objectType = when {
 * **type check:** `is String ->`, `!is String ->`
 
 ## Whe Expression with a case that throws an exception
-```
+```kotlin
 val result: Boolean = when (fileType) {
     UnixFileType.HYPHEN_MINUS -> true
     else -> throw IllegalArgumentException("Wrong type of file")
@@ -71,7 +71,7 @@ val result: Boolean = when (fileType) {
 
 ## When as else-if
 when can also be used as a replacement for an `if-else if` chain. If no argument is supplied, the branch conditions are simply boolean expressions, and a branch is executed when its condition is true:
-```
+```kotlin
 when {
     x.isOdd() -> print("x is odd")
     x.isEven() -> print("x is even")
