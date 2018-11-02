@@ -1,3 +1,8 @@
+# TOC
+* [Constants](/literals_and_constant.md#constants)
+* [Literals](/literals_and_constant.md#literals)
+* [Underscores in numeric literals](/literals_and_constant.md#underscores-in-numeric-literals)
+
 ## Constants
 * no keyword for constant
 * `val` is used for both constant and read-only variables
