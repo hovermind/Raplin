@@ -9,7 +9,7 @@
 * type system distinguishes between references that can hold null (nullable) and those that can not
 * a regular variable can not hold null
 * to allow nulls, use nullable operator `?`
-```
+```kotlin
 var a: String = "abc"
 a = null // compilation error
 
@@ -25,7 +25,7 @@ For non-nullable type, it's guaranteed not to cause an NPE. For nullable type, c
 * **Elvis operator with safe call:** `val personName = person?.name ?: "Hassan"`
 * **Safe casts:** `val x: Int? = a as? Int` (`null` if casting fails, instead of throwing `ClassCastException`)
 * **`let` keyword:**
-```
+```kotlin
 val listWithNulls: List<String?> = listOf("A", null, null, "B")
 for (item in listWithNulls) {
      item?.let { 
@@ -36,7 +36,7 @@ for (item in listWithNulls) {
 
 ## Forced unwrapping
 Not-null assertion operator `!!` (for NPE lovers) will return a non-null value of `x` or throw an NPE if `x` is `null`
-```
+```kotlin
 val len = name!!.length  // NPE if name is null
 
 if(name != null){
@@ -45,7 +45,7 @@ if(name != null){
 ```
 
 ## Using elvis operator as like swift guard operator
-```
+```kotlin
 fun foo(node: Node): String? {
 
     val parent = node.getParent() ?: return null  // early exit
@@ -57,8 +57,9 @@ fun foo(node: Node): String? {
     // ...
 }
 ```
-guard extension function
-```
+
+##### guard extension function
+```kotlin
 // Declare an extension function that calls a lambda called block if the value is null
 inline fun <T> T.guard(block: T.() -> Unit): T {
     if (this == null) block(); return this
@@ -71,7 +72,7 @@ val notNullThing = thing.guard { return }
 
 ## Collections of nullable type
 If you have a collection of elements of a nullable type and want to filter non-null elements, you can do so by using filterNotNull
-```
+```kotlin
 val nullableList: List<Int?> = listOf(1, 2, null, 4)
 val intList = nullableList.filterNotNull()
 ```
