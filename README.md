@@ -15,7 +15,7 @@
 * [function](https://github.com/hovermind/Raplin/blob/master/function.md)
 * [exception](https://github.com/hovermind/Raplin/blob/master/exception.md)
 * data structures
-    * [array](#)
+    * [array](https://github.com/hovermind/Raplin/blob/master/array.md)
     * [list](#)
     * [map](#)
     * [see](#)
