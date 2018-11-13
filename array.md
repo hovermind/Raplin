@@ -1,8 +1,8 @@
 # TOC
-* [Creating array by constructor](#)
-* [Creating array by standard library functions](#)
-* [Creating empty array](#)
-* [Size propery & count method](#)
+* [Creating array by constructor](/array.md#creating-array-by-constructor)
+* [Creating array by standard library functions](/array.md#creating-array-by-standard-library-functions)
+* [Creating empty array](/array.md#creating-empty-array)
+* [Size propery & count method](/array.md#size-propery--count-method)
 
 
 ## Creating array by constructor
