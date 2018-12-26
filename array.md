@@ -1,9 +1,8 @@
 # TOC
-* [Creating array by constructor](/array.md#creating-array-by-constructor)
-* [Creating array by standard library functions](/array.md#creating-array-by-standard-library-functions)
-* [Creating empty array](/array.md#creating-empty-array)
-* [Size propery & count method](/array.md#size-propery--count-method)
-
+* [Array in kotlin](#Array-in-kotlin)
+* [Specialized class for array](#Specialized-class-for-array)
+* [Creating array](#Creating-array)
+* [Size propery and count method](#Size-propery-and-count-method)
 
 ## Array in kotlin
 * arrays in Kotlin are represented by the Array class
