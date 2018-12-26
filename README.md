@@ -23,7 +23,7 @@
     * [queue](#)
 * [enum](#)
 * [structure](#)
-* [class](#)
+* [class](https://github.com/hovermind/raplin/blob/master/class.md)
 * [interface](#)
 * [deep dive](#)
     * [idioms](https://kotlinlang.org/docs/reference/idioms.html)
