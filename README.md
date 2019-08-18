@@ -17,7 +17,7 @@
     * [array](https://github.com/hovermind/Raplin/blob/master/array.md)
     * [list](#)
     * [map](#)
-    * [see](#)
+    * [set](#)
     * [stack](#)
     * [queue](#)
 * [enum](#)
