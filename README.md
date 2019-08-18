@@ -1,6 +1,5 @@
 **This is kinda Kotlin cheatsheet & intended for anyone who wants to learn Kotlin and is already good at (any) programming language i.e. C#, Java**
 
-[AIA](https://drive.google.com/folderview?id=0B2KMjffVzeSAN3d1R0N1NV9HNU0l)
 ## <a name="#toc">TOC
 * [data types and variables](https://github.com/hovermind/Raplin/blob/master/data_types_and_variables.md)
 * [literals and constant](https://github.com/hovermind/Raplin/blob/master/literals_and_constant.md)
